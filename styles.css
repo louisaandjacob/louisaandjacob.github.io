@@ -1,1 +1,19 @@
 /* css styles */
+
+.content > :first-child {
+  margin-top: 0;
+}
+
+.full-width-image {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.full-width-image img {
+  width: 100%;
+  height: 10cm;
+  object-fit: cover;
+  display: block;
+}
