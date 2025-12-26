@@ -1,8 +1,43 @@
 /* css styles */
 
-.content > :first-child {
-  margin-top: 0;
+/* 1. Kill navbar spacing completely */
+.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
+
+/* 2. Remove Quarto header spacing */
+header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 3. Remove page column top margin (THIS is usually the last 5–10px) */
+.page-columns {
+  margin-top: 0 !important;
+}
+
+/* 4. Remove container padding */
+main.container {
+  padding-top: 0 !important;
+}
+
+/* 5. Remove Quarto content padding */
+#quarto-content {
+  padding-top: 0 !important;
+}
+
+/* 6. Remove top margin of first real element */
+#quarto-content > :first-child {
+  margin-top: 0 !important;
+}
+
+/* 7. Safety: body sometimes has top padding */
+body {
+  padding-top: 0 !important;
+}
+
+
 
 .full-width-image {
   width: 100vw;
@@ -16,4 +51,9 @@
   height: 10cm;
   object-fit: cover;
   display: block;
+}
+
+h2 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
