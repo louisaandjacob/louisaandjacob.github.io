@@ -57,3 +57,15 @@ h2 {
   border-bottom: none !important;
   padding-bottom: 0 !important;
 }
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  max-width: 640px;
+  height: 800px;
+  border: 0;
+}
