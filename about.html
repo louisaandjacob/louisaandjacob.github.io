@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>about – Louisa &amp; Jacob</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -37,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-54a27f874f6e68cd2f67efd9e2aa7918.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2228db8a4c74b50a11454c63ac29dbc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -130,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#friday-04092026" id="toc-friday-04092026" class="nav-link" data-scroll-target="#friday-04092026">Friday — 04/09/2026</a>
   <ul class="collapse">
   <li><a href="#walking-tour-of-copenhagen" id="toc-walking-tour-of-copenhagen" class="nav-link" data-scroll-target="#walking-tour-of-copenhagen">16:00-17.30 — Walking tour of Copenhagen</a></li>
-  <li><a href="#late---street-food-drinks" id="toc-late---street-food-drinks" class="nav-link" data-scroll-target="#late---street-food-drinks">18:00-Late - Street food &amp; drinks</a></li>
+  <li><a href="#late---street-food-drinks" id="toc-late---street-food-drinks" class="nav-link" data-scroll-target="#late---street-food-drinks">17:30-Late - Street food &amp; drinks</a></li>
   </ul></li>
   <li><a href="#saturday-05092026" id="toc-saturday-05092026" class="nav-link" data-scroll-target="#saturday-05092026">Saturday — 05/09/2026</a>
   <ul class="collapse">
@@ -174,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="late---street-food-drinks" class="level3">
-<h3 class="anchored" data-anchor-id="late---street-food-drinks">18:00-Late - Street food &amp; drinks</h3>
+<h3 class="anchored" data-anchor-id="late---street-food-drinks">17:30-Late - Street food &amp; drinks</h3>
 <ul>
 <li>We have booked tables at <a href="https://broensstreetfood.dk/">Broens Gadekøkken</a>, just across the bridge from Nyhavn or a few minutes’ walk from Christianshavns Station. We will buy the first round of pitchers, but food and additional drinks are at your own expense.</li>
 </ul>
@@ -291,13 +294,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
